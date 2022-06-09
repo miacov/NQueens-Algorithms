@@ -20,8 +20,8 @@ This algorithm performs an exhaustive search of states of the problem.
 > 1. While the stack is not empty:
 >     1. Pop the stack to get state V
 >     1. For each valid next state Vi of state V (one more queen placed):
->       1. If state Vi is a solution then return it and finish
->       1. Else push state Vi at the top of the stack
+>         1. If state Vi is a solution then return it and finish
+>         1. Else push state Vi at the top of the stack
 > 1. Return no solution exists (empty stack)
 
 ## Random-Restart Hill Climbing
