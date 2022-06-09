@@ -31,12 +31,12 @@ This algorithm performs a series of hill-climbing searches from randomly-generat
 > 1. T0 is the number of pairs of queens that attack each other
 > 1. Set T=T0, x=0, y=0
 > 1. For i=1..N
->   1. For j=1..N, j≠Yi
->     1. K is the number of pairs of queens that attack each other if queen Qi moved to position (i, j)
->     1. If K<T then T=K, x=i, y=j (mark position)
+>     1. For j=1..N, j≠Yi
+>         1. K is the number of pairs of queens that attack each other if queen Qi moved to position (i, j)
+>         1. If K<T then T=K, x=i, y=j (mark position)
 > 1. If T<T0 (found move that reduces attacks) then move queen Qx to position (x, y)
->   1. If T=0 (no attacks) then return the current state and finish
->   1. Else go to step 4
+>     1. If T=0 (no attacks) then return the current state and finish
+>     1. Else go to step 4
 > 1. Else go to step 1 (restart as no move that reduces attacks was found)
 
 ## Simulated Annealing
@@ -47,7 +47,7 @@ This algorithm attempts to solve the local optima problem of the hill-climbing a
 > 1. Choose a queen Qx, x=1..N, and a column y in range 1..N randomly
 > 1. T is the number of pairs of queens that attack each other if queen Qx moved to position (x, y)
 > 1. If T<=T0 (found move that reduces attacks or keeps them the same) then move queen Qx to position (x, y)
->   1. If T=0 (no attacks) then return the current state and finish
+>     1. If T=0 (no attacks) then return the current state and finish
 > 1. Else ΔT=T0-T, ΔT<0. Probability p=α⋅e^ΔT, where 0<α<=1 is a constant (set to α=0.001). Choose a random real number r in range 0..1. If r<=p then move queen Qx to position (x, y).
 > 1. Go to step 2
 
