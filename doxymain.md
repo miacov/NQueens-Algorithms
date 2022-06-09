@@ -1,6 +1,7 @@
 @mainpage N-Queens Problem Algorithms
 
 @author Marios Iacovou
+
 @since 08/11/2019
 
 This problem requires the program to find a pattern of queens
