@@ -48,7 +48,7 @@ This algorithm attempts to solve the local optima problem of the hill-climbing a
 > 1. T is the number of pairs of queens that attack each other if queen Qx moved to position (x, y)
 > 1. If T<=T0 (found move that reduces attacks or keeps them the same) then move queen Qx to position (x, y)
 >   1. If T=0 (no attacks) then return the current state and finish
-> 1. Else \Delta T=T0-T, \Delta T<0. Probability p=\alpha \cdot e^{(\frac {\Delta H}{T})}, where 0<\alpha <=1 is a constant. Choose a random real number r in range 0..1. If r<=p then move queen Qx to position (x, y).
+> 1. Else ΔT=T0-T, ΔT<0. Probability p=α⋅e^ΔT, where 0<α<=1 is a constant. Choose a random real number r in range 0..1. If r<=p then move queen Qx to position (x, y).
 > 1. Go to step 2
 
 ## Usage
